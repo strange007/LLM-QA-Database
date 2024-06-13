@@ -1,3 +1,59 @@
+# Readme in English
+# Knowledge Base Generation and Question Answering System based on LLM
+
+## Create a virtual environment
+Python 3.11 requires CUDA version 12 or above
+
+## Install all dependencies
+
+$ cd 2024lmcbise
+$ pip install -r requirements.txt
+
+## Download models
+Required models include:
+
+chatGLM2-6b
+text2vec
+You can download common open-source LLM and embedding models from the HuggingFace mirror website hf-mirror.com.
+To download models, you need to install Git LFS first, and then run the following commands:
+
+$ git lfs install
+$ git clone https://hf-mirror.com/THUDM/chatglm2-6b
+$ git clone https://hf-mirror.com/GanymedeNil/text2vec-large-chinese
+
+## Modify configuration files
+Add the absolute path of the model in model_config.py.
+
+## Run the program
+
+cd 2024lmcbise
+
+Execute the cli_demo.py script to experience command-line interaction:
+
+
+$ python cli_demo.py
+
+Or execute the webui.py script to experience Web interaction:
+
+
+$ python webui.py
+
+Or deploy an API using fastapi:
+
+
+$ python api.py
+
+Experience the VUE-based front-end page after successfully deploying the API:
+
+$ cd views
+$ pnpm i
+$ npm run dev
+
+Project Reference: https://github.com/chatchat-space/Langchain-Chatchat
+
+---
+# Readme in Chinese
+
 # Knowledge base generation and question answering system based on LLM
 
 ## 创建虚拟环境
